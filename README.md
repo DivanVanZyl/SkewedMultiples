@@ -13,3 +13,4 @@ Implement algorithm to find P(M,N)
 
 Write unit test for MathTool classes
 
+Figure out, how to change the interface's methods, to return a generic type. eg. T instead of Biginteger. Is this even possible? And/or is another approach better?
