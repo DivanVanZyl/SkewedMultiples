@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkewedMultiples", "SkewedMultiples\SkewedMultiples.csproj", "{4F970DA7-89B8-4897-80C8-38D32E185937}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathTools", "MathTools\MathTools.csproj", "{1D474DC1-D42C-455C-8F0B-9E214CA9CE39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathToolsTests", "MathToolsTests\MathToolsTests.csproj", "{62F4ED12-0552-44C0-A854-1D4C151A33AD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A9EE14D0-875F-4350-9DF9-29D4A346ED82}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4F970DA7-89B8-4897-80C8-38D32E185937}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F970DA7-89B8-4897-80C8-38D32E185937}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F970DA7-89B8-4897-80C8-38D32E185937}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F970DA7-89B8-4897-80C8-38D32E185937}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D474DC1-D42C-455C-8F0B-9E214CA9CE39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D474DC1-D42C-455C-8F0B-9E214CA9CE39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D474DC1-D42C-455C-8F0B-9E214CA9CE39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D474DC1-D42C-455C-8F0B-9E214CA9CE39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62F4ED12-0552-44C0-A854-1D4C151A33AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62F4ED12-0552-44C0-A854-1D4C151A33AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62F4ED12-0552-44C0-A854-1D4C151A33AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62F4ED12-0552-44C0-A854-1D4C151A33AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {85DA2ECE-F370-4C12-9E1E-063F562C93E0}
+	EndGlobalSection
+EndGlobal
