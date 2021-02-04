@@ -8,13 +8,10 @@ namespace SkewedMultiples
     {
         static void Main(string[] args)
         {
-            //MathTools.MaxSkewedMultiple(args[0]/*M in P(M,N)*/, args[1]/*N in P(M,N)*/);
             IMathDisplay display = new ConsoleDisplay();
             IMathDomain skewedMutiples = new MaxSkewedMultiple();
 
-            var intArgs = Array.ConvertAll(args, int.Parse);
-
-            display.Write(skewedMutiples.Run(intArgs).ToString());
+            display.Write("P(" + args[0] + ", " + args[1] + ") = " + skewedMutiples.Run(Array.ConvertAll(args, int.Parse)).ToString());
         }
     }
 }

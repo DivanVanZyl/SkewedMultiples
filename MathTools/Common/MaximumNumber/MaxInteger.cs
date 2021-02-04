@@ -8,8 +8,8 @@ namespace MathTools
     /// <summary>
     /// Return Maximum BigInteger from a list
     /// </summary>
-    public class MaxInteger : IMaximumNumber 
+    public class MaxBiginteger : IMaximumNumber 
     {
-        public T GetMax<T>(List<T> list) => list.Max();
+        public BigInteger GetMax<BigInteger>(List<BigInteger> list) => list.Max();
     }
 }

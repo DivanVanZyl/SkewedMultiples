@@ -36,7 +36,6 @@ namespace MathTools.Domain
 
             //Return Maximum Skewed Multiple in List of Skewed Multiples
             return max.GetMax(multiples);
-
         }
     }
 }
