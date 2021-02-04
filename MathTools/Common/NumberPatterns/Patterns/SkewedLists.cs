@@ -144,5 +144,65 @@ namespace MathTools.Common.NumberPatterns
                 }
             }
         }
+
+
+        /// <summary>
+        /// Recursive function to increment through all possibilities for the given params
+        /// </summary>
+        /// <param name="lists">Collocitons passed by reference</param>
+        /// <param name="listSize">Size of collections</param>
+        /// <param name="upperLimit">Max value of each element</param>
+        /// <param name="indexShift">Amount of indexes to recusively shift up</param>
+        private void SimpleCountUpRec(ref List<List<int>> lists, int listSize, int upperLimit, int indexShift)
+        {
+            //Check if at end
+            bool endFlag = true;
+            foreach (int i in lists[^1])
+            {
+                if (i < upperLimit)
+                {
+                    endFlag = false;
+                }
+            }
+            if (endFlag) return;
+
+            if (lists[^1][listSize - 1] < upperLimit)
+            {
+                //Copy
+                var tmpList = new List<int>();
+                foreach (int i in lists[^1])
+                {
+                    tmpList.Add(i);
+                }
+                tmpList[listSize - 1] += 1;
+                //Add 1
+                lists.Add(tmpList);
+                SimpleCountUpRec(ref lists, listSize, upperLimit, 0);
+            }
+            else
+            {
+                //Shift one up
+                //Check if another shift is requered eg. { 1 , 1 , 20 , 20 } => { 1 , 2 , 1 , 1 }
+                if (lists[^1][(listSize - 1) - indexShift] == upperLimit)
+                {
+                    SimpleCountUpRec(ref lists, listSize, upperLimit, ++indexShift);
+                }
+                //Copy
+                var tmpList = new List<int>();
+                foreach (int i in lists[^1])
+                {
+                    tmpList.Add(i);
+                }
+
+                for (int cnt = 0; cnt < indexShift; cnt++)
+                {
+                    tmpList[tmpList.Count - 1 - cnt] = 1;  //reset prev ALL VALUES BEFORE THE ABOVE MUST BE SET TO 1
+                }
+                tmpList[(listSize - 1) - indexShift] += 1;   //Shift one up. THIS VALUE MUST MOVE UPWARDS/DOWNWARDS
+                                                             //Add 1
+                lists.Add(tmpList);
+                SimpleCountUpRec(ref lists, listSize, upperLimit, 0);
+            }
+        }
     }
 }
